@@ -29,8 +29,8 @@ function multiples (){
     resultDiv.innerHTML=resultArray;
     let A = parseInt(document.getElementById("digitA").value)
     let X =parseInt(document.getElementById("digitX").value) 
-    if(A==0||X==0){   // An entry validation to make sure the multiplications does not generate zero
-        resultDiv.innerHTML="Please Enter a non-zero digit"
+    if(A<0||X<0){   // An entry validation to make sure the there are no zero or negative number
+        resultDiv.innerHTML="Please Enter a Positive number greater then Zero"
         return;
     }
 
