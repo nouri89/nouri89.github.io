@@ -1,6 +1,11 @@
 
-Hello and Thank you and welcome to my Code:
+Hello and welcome to my Code:
 
+The assumption I have made is:
+ -The user will enter positive numbers.
+ -The multiplication will include the X,2X and 3X
+
+-A front end was created using HTML AND CSS file to take the entries from the user.
 The approach taken to solve this challenge is to :
 1-Create an empty array to save the result of every multiplication.
 2-Check if A or X are greater then zero if not the user is prompt to enter  an number greater then 0.
@@ -13,5 +18,5 @@ The approach taken to solve this challenge is to :
  -Display the result in the screen.
  - A refresh button is created to clear the content.
  
- Thank you very much:
+ Thank you very much.
  
