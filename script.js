@@ -57,7 +57,13 @@ function multiples (){
     for(let index=2;index*(A+2)<=(3*X);index+=2){
         resultArray.push(index*(A+2))  
     }
-    resultDiv.innerText=resultArray;
+  /* Check if there are mutiples genertated  if not desplay a message */
+    if(resultArray.length==0){
+        resultDiv.innerHTML=`There are no Multiples found for digit A=${A} and digit X=${X}`;
+    }
+    else{
+        resultDiv.innerText=resultArray;
+    }
         
 });
 
