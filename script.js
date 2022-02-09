@@ -68,7 +68,7 @@ function multiples (){
 let clearResult=document.getElementById("refresh");
 refresh.addEventListener("click",function(){
     resultDiv.innerHTML="";
-    document.getElementById("digitA").innerHTML="";
-   document.getElementById("digitX").innerHTML="";
+   document.getElementById("digitA").value="";
+   document.getElementById("digitX").value="";
 
 })
