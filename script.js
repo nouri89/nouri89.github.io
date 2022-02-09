@@ -29,16 +29,12 @@ function multiples (){
     resultDiv.innerHTML=resultArray;
     let A = parseInt(document.getElementById("digitA").value)
     let X =parseInt(document.getElementById("digitX").value) 
-    if(A<0||X<0){   // An entry validation to make sure the there are no zero or negative number
+    if(A<=0||X<=0){   // An entry validation to make sure the there are no zero or negative number
         resultDiv.innerHTML="Please Enter a Positive number greater then Zero"
         return;
     }
 
-    if(A>X){  // An entry validation to make sure that X is greater then A 
-        resultDiv.innerHTML="Please Enter a bigger value for X"
-        return;
-    }
-
+  
      if(typeof A!="number" ||typeof X!="number"){ 
         resultDiv.innerHTML="Please Enter a valid digit"
         return;
