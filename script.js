@@ -3,7 +3,7 @@
 /********************************************************************************************************** */
 /*The approach taken to solve this challenge is to :
 1-create an empty array to save the result of every multiplication.
--Check if A or X are greater then zero if note an error message is thrown.
+-Check if A or X are greater then zero if not an error message is thrown.
 
 2-use a for loop to iterate in multiples starting the iteration from 2 and incrementing it by 2 to provide multiples.
 3-test the three conditions :
