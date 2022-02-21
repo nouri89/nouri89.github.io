@@ -8,16 +8,14 @@ Please upload to a public Github repository and share the link.”
 /********************************************************************************************************** */
 /*The approach taken to solve this challenge is to :
 1-create an empty array to save the result of every multiplication.
--Check if A or X are greater then zero if note an error message is thrown.
+-Check if A or X are greater then zero if not an error message is thrown.
 
-2-use a for loop to iterate in multiples starting the iteration from 2 and incrementing it by 2 to provide multiples.
+2-use a for loop to iterate in multiples starting the iteration from 1 and incrementing it by 1 to provide multiples.
 3-test the three conditions :
  -multiples of A until X.
  -multiples of A+1 until 2X.
  -multiples of A+2 until 3X.
  and store them accordingly 
- 
-button
 */
 
 
@@ -106,10 +104,10 @@ sortDesc.addEventListener("click",function(){
    
 })
 
+// a function which filters the duplicates
 let remove=document.getElementById("removeDuplica");
 remove.addEventListener("click",function(){
     
-  
     resultArray= resultArray.filter((number,index)=> {return resultArray.indexOf(number)===index})
    resultDiv.innerText=resultArray;
    
