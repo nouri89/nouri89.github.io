@@ -25,24 +25,26 @@ let resultDiv = document.getElementById("result");
 
 let spaceA = document.querySelector("#digitA");
 let spaceB = document.getElementById("digitX");
-let resultArray = [];
+let resultArray = []; // An array where to store the result of the multiplications
 
 
 showResult.addEventListener("click",
 	function multiples() {
-		//  let resultArray =[]     // An array where to store the result of the multiplications
+		   
 		resultDiv.innerHTML = resultArray;
 		let A = parseInt(document.getElementById("digitA").value)
 		let X = parseInt(document.getElementById("digitX").value)
+		
+		if (!A || !X || typeof A != "number" || typeof X != "number" ) {
+			resultDiv.innerHTML = "Please Enter a valid digit"
+			return;
+		}
 		if (A <= 0 || X <= 0) { // An entry validation to make sure the multiplications does not generate zero
 			resultDiv.innerHTML = "Please Enter a positive number greater then Zero"
 			return;
 		}
 
-		if (typeof A != "number" || typeof X != "number") {
-			resultDiv.innerHTML = "Please Enter a valid digit"
-			return;
-		}
+		
 
 		/*  First iteration using a for loop to generate the first multiples of A until X  the condition to stop the loop is that the multiplication  index*A<=X 
 		    Every time an iteration is completed the result is pushed to the array*/
