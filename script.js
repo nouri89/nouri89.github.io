@@ -82,12 +82,20 @@ refresh.addEventListener("click", function () {
 
 let sortAsc = document.getElementById("sortAscend");
 sortAsc.addEventListener("click", function () {
+	if (resultArray.length==0 ) {
+			resultDiv.innerHTML = "No Numbers to sort"
+			return;
+		}
 	resultArray = resultArray.sort((a, b) => a - b)
 	resultDiv.innerText = resultArray;
 
 })
 let sortDesc = document.getElementById("sortDescend");
 sortDesc.addEventListener("click", function () {
+	if (resultArray.length==0 ) {
+			resultDiv.innerHTML = "No Numbers to sort"
+			return;
+		}
 	resultArray = resultArray.sort((a, b) => b - a)
 	resultDiv.innerText = resultArray;
 })
@@ -95,6 +103,10 @@ sortDesc.addEventListener("click", function () {
 // a function which filters the duplicates
 let remove = document.getElementById("removeDuplica");
 remove.addEventListener("click", function () {
+	if (resultArray.length==0 ) {
+			resultDiv.innerHTML = "No Duplicates to Remove"
+			return;
+		}
 
 	resultArray = resultArray.filter((number, index) => {
 		return resultArray.indexOf(number) === index
