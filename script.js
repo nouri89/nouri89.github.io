@@ -43,25 +43,25 @@ showResult.addEventListener("click",
 			resultDiv.innerHTML = "Please Enter a positive number greater then Zero"
 			return;
 		}
+	
+	        // store the initials and the conditions in an array
+  		 let from =[A,A+1,A+2];
+  		 let to=[X,2*X,3*X];
+
+
+ 		  // Create a function to generate the multiplication  and store it in the resultArray according to the conditions
+  		 function runTheLoop( start, condition){
+   			 for(let i=1;i*start<=condition;i++){       
+               			 resultArray.push(i*start)// store the multiplication in the resultArray
+           		 }
+   		}
+   
+   		//call the function to generate the multiples using a ForEach loop
+  		 from.forEach((element,index)=>runTheLoop(element,to[index]))
 
 		
 
-		/*  First iteration using a for loop to generate the first multiples of A until X  the condition to stop the loop is that the multiplication  index*A<=X 
-		    Every time an iteration is completed the result is pushed to the array*/
-		for (let index = 1; index * A <= X; index++) {
-			resultArray.push(index * A)
-		}
-
-		/*  Second iteration to generate the second multiples of A + 1 until 2X the condition to stop the loop is index*(A+1)<=2X 
-		      Every time an iteration is completed the result is pushed to the array*/
-		for (let index = 1; index * (A + 1) <= (2 * X); index++) {
-			resultArray.push(index * (A + 1))
-		}
-		/*  Third  iteration to generate the last multiples of A + 2 until 3X the condition to stop the loop is index*(A+2)<=3X 
-		    Every time an iteration is completed the result is pushed to the array*/
-		for (let index = 1; index * (A + 2) <= (3 * X); index++) {
-			resultArray.push(index * (A + 2))
-		}
+		
 		if (resultArray.length == 0) {
 
 			resultDiv.innerHTML = `There are no Multiples found for digit A=${A} and digit X=${X}`;
