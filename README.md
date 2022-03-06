@@ -30,6 +30,10 @@ The approach taken to solve this challenge was to :
  
  -A refresh button is created to clear the content.
  
+ -A sorting buttons is addored to sort the result ascendent descendent.
+ 
+ -A remove duplicate button is also addedd.
+ 
  
  Thank you very much.
  
