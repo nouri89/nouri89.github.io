@@ -7,39 +7,50 @@ body {
 body {
 	font-family: monospace;
 	font-size: 20px;
-    background-color: aqua;
+	background-color: aqua;
 }
-h2,h4,h6{
 
-    text-align: center;
+h2,
+h4,
+h6 {
+	text-align: center;
 }
-main{
-    text-align: center;
-}
-#result{
-    text-align: center;
-    padding: 20px 20px;
-    margin: 10px 10px;
-    word-wrap: break-word;
-}
-footer{ height:30px; 
-    background:#000; 
-    color:#fff;
-text-align: center;}
 
-button{
-    background-color:black;
-    color:white
+main {
+	text-align: center;
 }
-#refresh,#refreshnosq{
-    background-color:greenyellow;
-    color:green
-}
-#generate, #generatenoSq{
 
-    background-color:blue;
-    color:white;
+#result {
+	text-align: center;
+	padding: 20px 20px;
+	margin: 10px 10px;
+	word-wrap: break-word;
 }
-#resultnoSq{
-    height: 30px;
+
+footer {
+	height: 30px;
+	background: #000;
+	color: #fff;
+	text-align: center;
+}
+
+button {
+	background-color: black;
+	color: white
+}
+
+#refresh,
+#refreshnosq {
+	background-color: greenyellow;
+	color: green
+}
+
+#generate,
+#generatenoSq {
+	background-color: blue;
+	color: white;
+}
+
+#resultnoSq {
+	height: 30px;
 }
