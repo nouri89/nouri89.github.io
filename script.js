@@ -1,4 +1,4 @@
-// /* 
+// /*
 // “In a language of your choice, using all best practice principles you’re aware of,
 //  could you please provide code that iterates in multiples of A until X, then in multiples of A + 1 until 2X,
 //   then multiples of A + 2 until 3X. Please state any assumptions you’ve made.
@@ -6,37 +6,26 @@
 // Please upload to a public Github repository and share the link.”
 
 // /********************************************************************************************************** */
-/*
--The user will enter positive numbers.
 
--The result of multiplications will include the X,2X and 3X.
+   
+/********************************************************************************************************** */
+/*There are two  approaches taken to solve this challenge :
 
-A front end was created using HTML and CSS files to take the entries from the user.
+ 1-Assuming the iteration is a sequence hence:
+-create an empty array to save the result of every multiplication.
+-use a for loop to iterate in multiples starting the iteration from 1 and incrementing it by 1 to provide multiples.
+-test the three conditions :
+ -multiples of A until X.
+ -multiples of A+1 until 2X.
+ -multiples of A+2 until 3X.
+ and store them accordingly 
 
-The approach taken to solve this challenge was to :
+2-Assuming the iteration is a not in a sequence hence:
 
-1-Create an empty array to save the result of every multiplication.
-
-2-store the initials and the conditions in two separate arrays.
-
-3-Create a call back function to generate the multiplication and store it in the resultArray according to the conditions to avoid repetition.
-
-4-call the function to generate the multiples using a ForEach loop.
-
-5-store the multiplication in the resultArray.
-
-6-Display the result in the screen.
-
--A refresh button is created to clear the content.
-
--A sorting buttons is added to sort the result ascendent descendent.
-
--A remove duplicate button is also added.
-
-Thank you very much.
-
+Generate multiples of A till X , then multiples of A+1 till 2X then multiples of A+2 till 3X from the start of the iteration
 
 */
+
 
 
 
@@ -51,7 +40,7 @@ let resultArray =[] ;
 showResult.addEventListener("click",
 
 function multiples (){
-  //  let resultArray =[]     // An array where to store the result of the multiplications
+  
     resultDiv.innerHTML=resultArray;
     let A = parseInt(document.getElementById("digitA").value)
     let X =parseInt(document.getElementById("digitX").value) 
@@ -67,26 +56,30 @@ function multiples (){
         return;
      }
    
-   // store the initials and the conditions in an array
-   let from =[A,A+1,A+2];
-   let to=[X,2*X,3*X];
-
-
-   // Create a function to generate the multiplication  and store it in the resultArray according to the conditions
-   function runTheLoop( start, condition){
-    for(let i=1;i*start<=condition;i++){       
-                resultArray.push(i*start)// store the multiplication in the resultArray
-            }
-   }
    
-   //call the function to generate the multiples using a ForEach loop
-   from.forEach((element,index)=>runTheLoop(element,to[index]))
 
-   
-  
 
 
     
+   /* First iteration using a for loop to generate the first multiples of A until X  the condition to stop the loop is that the multiplication  index*A<=X 
+       Every time an iteration is completed the result is pushed to the array*/
+       let index=A
+    for(index;index<=X;index+=A){       
+        resultArray.push(index)
+    }
+    index++;
+    //   Second iteration to generate the second multiples of A + 1 until 2X the condition to stop the loop is index*(A+1)<=2X 
+   //       Every time an iteration is completed the result is pushed to the array*/
+    for(index;index<=2*X;index+=(A+1)){       
+        resultArray.push(index)
+    }
+    index++;
+/*  Third  iteration to generate the last multiples of A + 2 until 3X the condition to stop the loop is index*(A+2)<=3X 
+//        Every time an iteration is completed the result is pushed to the array*/
+    for(index;index<=3*X;index+=(A+2)){       
+        resultArray.push(index)
+    }
+
 
     if(resultArray.length==0){
         
@@ -110,20 +103,106 @@ refresh.addEventListener("click",function(){
    document.getElementById("digitX").value="";
 
 })
+
+
+//==================================
+
+
+
+let showResultNoSq = document.getElementById("generatenoSq");
+let resultDivNoSQ=document.getElementById("resultnoSq");
+
+let spaceANoSq= document.querySelector("#digitAnoSq");
+let spaceBNoSq =document.getElementById("digitXnoSq");
+let resultArrayNoSq =[] ;
+
+
+showResultNoSq.addEventListener("click",
+
+function multiples (){
+
+    
+    resultDivNoSQ.innerHTML=resultArrayNoSq;
+    let A = parseInt(document.getElementById("digitAnoSq").value)
+    let X =parseInt(document.getElementById("digitXnoSq").value) 
+                                            
+    if(A<=0||X<=0){   // An entry validation to make sure the multiplications does not generate zero
+        resultDivNoSQ.innerHTML="Please Enter a positive number greater then Zero"
+        return;
+    }
+
+   
+
+     if(typeof A!="number" ||typeof X!="number"){ 
+        resultnoSq.innerHTML="Please Enter a valid digit"
+        return;
+     }
+   
+   // store the initials and the conditions in an array
+   let from =[A,A+1,A+2];
+   let to=[X,2*X,3*X];
+
+
+ //  Create a function to generate the multiplication  and store it in the resultArray according to the conditions
+   function runTheLoop( start, condition){
+    for(let i=1;i*start<=condition;i++){       
+        resultArrayNoSq.push(i*start)// store the multiplication in the resultArray
+            }
+   }
+   
+   //call the function to generate the multiples using a ForEach loop
+   from.forEach((element,index)=>runTheLoop(element,to[index]  ))
+
+    if(resultArrayNoSq.length==0){
+        
+        resultDivNoSQ.innerHTML=`There are no Multiples found for digit A=${A} and digit X=${X}`;
+    }
+    else{
+        resultDivNoSQ.innerText=resultArrayNoSq;
+    }
+    
+        
+});
+
+
+refreshnosq.addEventListener("click",function(){
+   
+    resultArrayNoSq=[];
+    resultDivNoSQ.innerHTML="";
+    spaceANoSq.value="";
+    spaceBNoSq.value=""
+   document.getElementById("digitA").value="";
+   document.getElementById("digitX").value="";
+console.log("testing")
+
+})
+
+
+
+
+
+
+
+//====================================
+
+
+
+
+
 let sortAsc=document.getElementById("sortAscend");
 sortAsc.addEventListener("click",function(){
     
 
-    resultArray= resultArray.sort((a,b)=>a-b)
-    resultDiv.innerText=resultArray;
+    resultArrayNoSq= resultArrayNoSq.sort((a,b)=>a-b)
+    resultDivNoSQ.innerText=resultArrayNoSq;
    
 })
 let sortDesc=document.getElementById("sortDescend");
 sortDesc.addEventListener("click",function(){
     
 
-    resultArray= resultArray.sort((a,b)=>b-a)
-    resultDiv.innerText=resultArray;
+    resultArrayNoSq= resultArrayNoSq.sort((a,b)=>b-a)
+    resultDivNoSQ.innerText=resultArrayNoSq;
    
 })
 
@@ -131,7 +210,7 @@ sortDesc.addEventListener("click",function(){
 let remove=document.getElementById("removeDuplica");
 remove.addEventListener("click",function(){
     
-    resultArray= resultArray.filter((number,index)=> {return resultArray.indexOf(number)===index})
-   resultDiv.innerText=resultArray;
+    resultArrayNoSq= resultArrayNoSq.filter((number,index)=> {return resultArrayNoSq.indexOf(number)===index})
+    resultDivNoSQ.innerText=resultArrayNoSq;
    
 })
