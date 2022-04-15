@@ -61,24 +61,20 @@ function multiples (){
 
 
     
-   /* First iteration using a for loop to generate the first multiples of A until X  the condition to stop the loop is that the multiplication  index*A<=X 
-       Every time an iteration is completed the result is pushed to the array*/
-       let index=A
-    for(index;index<=X;index+=A){       
-        resultArray.push(index)
+    let from =[A,A+1,A+2];
+    let to=[X,2*X,3*X];
+    
+ 
+    let index=A
+  //  Create a function to generate the multiplication  and store it in the resultArray according to the conditions
+    function runTheLoop( start, condition){
+       
+     for(index;index<=condition;index+=start){       
+        resultArray.push(index)// store the multiplication in the resultArray
+             }
+             index++;
     }
-    index++;
-    //   Second iteration to generate the second multiples of A + 1 until 2X the condition to stop the loop is index*(A+1)<=2X 
-   //       Every time an iteration is completed the result is pushed to the array*/
-    for(index;index<=2*X;index+=(A+1)){       
-        resultArray.push(index)
-    }
-    index++;
-/*  Third  iteration to generate the last multiples of A + 2 until 3X the condition to stop the loop is index*(A+2)<=3X 
-//        Every time an iteration is completed the result is pushed to the array*/
-    for(index;index<=3*X;index+=(A+2)){       
-        resultArray.push(index)
-    }
+    from.forEach((element,index)=>runTheLoop(element,to[index] ,index ))
 
 
     if(resultArray.length==0){
