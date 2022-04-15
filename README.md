@@ -1,32 +1,20 @@
 Hello and welcome to my Code:
 
-The assumptions I have made are:
- 
- -The user will enter positive numbers.
- 
- -The result of multiplications will include the X,2X and 3X.
+*There are two  approaches taken to solve this challenge :
 
-A front end was created using HTML and CSS files to take the entries from the user.
+ 1-Assuming the iteration is a sequence hence:
+-create an empty array to save the result of every multiplication.
+-use a for loop to iterate in multiples starting the iteration from 1 and incrementing it by 1 to provide multiples.
+-test the three conditions :
+ -multiples of A until X.
+ -multiples of A+1 until 2X.
+ -multiples of A+2 until 3X.
+ and store them accordingly 
 
-The approach taken to solve this challenge was to :
+2-Assuming the iteration is a not in a sequence hence:
 
-1-Create an empty array to save the result of every multiplication.
+Generate multiples of A till X , then multiples of A+1 till 2X then multiples of A+2 till 3X from the start of the iteration
 
-2-store the initials and the conditions in two sperate arrays
-
-3-Create a call back function to generate the multiplication  and store it in the resultArray according to the conditions to avoid repetition.
-
-4-call the function to generate the multiples using a ForEach loop
-
-5-store the multiplication in the resultArray
-
-6-Display the result in the screen.
- 
- -A refresh button is created to clear the content.
- 
- -A sorting buttons is addored to sort the result ascendent descendent.
- 
- -A remove duplicate button is also addedd.
  
  
  Thank you very much.
