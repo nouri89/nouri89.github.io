@@ -31,12 +31,15 @@ button{
     background-color:black;
     color:white
 }
-#refresh{
+#refresh,#refreshnosq{
     background-color:greenyellow;
     color:green
 }
-#generate{
+#generate, #generatenoSq{
 
     background-color:blue;
     color:white;
+}
+#resultnoSq{
+    height: 30px;
 }
