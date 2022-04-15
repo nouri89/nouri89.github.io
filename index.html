@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style.css">
-      <title>2i Challenge</title>
-   </head>
-   <body>
-      <h2>2i Multiples challenge </h2>
-      <h4> This Program  iterates in multiples of A until X, then in multiples of A + 1 until 2X,
-         then multiples of A + 2 until 3X.
-      </h4>
-      <div>
-         <h6>***** This program Assumes you enter a positive numbers and A is greater or equal to X *****</h6>
-      </div>
-      <hr>
-      <main>
-         <label for="fname">Enter a digit A:</label>
-         <input type="number" id="digitA" name="fname"><br><br>
-         <label for="lname">Enter a digit X:</label>
-         <input type="number" id="digitX" name="lname"><br><br>
-         <input type="submit"  id="generate" value="Generate Multiples">
-         <button id="sortAscend">Sort in ascending order</button>
-         <button id="sortDescend">Sort in descending order</button>
-         <button id="removeDuplica">Remove duplicates</button>
-         <button id="refresh">Refresh</button>
-      </main>
-      <hr>
-      <div id="result"></div>
-      <footer>Challenge solved by Abdennour Hachemi . Many Thanks</footer>
-      <script src="script.js"></script>
-   </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>2i Challenge</title>
+</head>
+<body>
+<h2>2i Multiples challenge </h2>
+<h4> This Program  iterates in multiples of A until X, then in multiples of A + 1 until 2X,
+    then multiples of A + 2 until 3X.</h4>
+    <div><h6>**** This program Assumes you enter a positive numbers and A is greater or equal to X ****</h6></div>
+<hr>
+<main>
+    <h3>There are two Approaches in solving this challenge:</h3>
+    <hr>
+    <h4> First: the multiples are generated considering the sequence</h4>
+    
+   
+    <label for="fname">Enter a digit A:</label>
+  <input type="number" id="digitA" name="fname"><br><br>
+  <label for="lname">Enter a digit X:</label>
+  <input type="number" id="digitX" name="lname"><br><br>
+  <input type="submit"  id="generate" value="Generate Multiples">
+ 
+  
+  <button id="refresh">Refresh</button>
+
+  <hr>
+  <div id="result"></div>
+  <hr>
+  <h4> Second: the multiples are generated discarding the sequence</h4>
+    
+   
+  <label for="fname">Enter a digit A:</label>
+<input type="number" id="digitAnoSq" name="A"><br><br>
+<label for="lname">Enter a digit X:</label>
+<input type="number" id="digitXnoSq" name="X"><br><br>
+<input type="submit"  id="generatenoSq" value="Generate Multiples">
+
+<button id="sortAscend">Sort in ascending order</button>
+<button id="sortDescend">Sort in descending order</button>
+<button id="removeDuplica">Remove duplicates</button>
+<button id="refreshnosq">Refresh</button>
+<hr>
+<div id="resultnoSq"></div>
+<hr>
+</main>
+
+    
+    
+    <footer>Challenge solved by Abdennour Hachemi </footer>
+    <script src="script.js"></script>
+</body>
 </html>
