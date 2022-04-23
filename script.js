@@ -46,6 +46,10 @@ showResult.addEventListener("click",
 			resultDiv.innerHTML = "Please Enter a positive number greater then Zero"
 			return;
 		}
+		if(A>X){   // An entry validation to make sure that A is equal or less then X
+			resultDiv.innerHTML="Please Enter a bigger value for X"
+			return;
+	        }
 
 
 		if (typeof A != "number" || typeof X != "number") {
@@ -114,6 +118,10 @@ showResultNoSq.addEventListener("click",
 			resultDivNoSQ.innerHTML = "Please Enter a positive number greater then Zero"
 			return;
 		}
+		if(A>X){   // An entry validation to make sure that A is equal or less then X
+			resultDiv.innerHTML="Please Enter a bigger value for X"
+			return;
+	        }
 
 
 		if (typeof A != "number" || typeof X != "number") {
