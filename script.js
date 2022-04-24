@@ -56,6 +56,11 @@ showResult.addEventListener("click",
 			resultDiv.innerHTML = "Please Enter a valid digit"
 			return;
 		}
+	
+		if( document.getElementById("digitA").value=="" || document.getElementById("digitX").value==""){ 
+       			 resultDiv.innerHTML="Please Enter a valid digit"
+      		         return;
+   	        }
 
 
 		let from = [A, A + 1, A + 2];
@@ -128,6 +133,10 @@ showResultNoSq.addEventListener("click",
 			resultnoSq.innerHTML = "Please Enter a valid digit"
 			return;
 		}
+	         if( document.getElementById("digitAnoSq").value=="" || document.getElementById("digitXnoSq").value==""){ 
+                        resultDiv.innerHTML="Please Enter a valid digit"
+                        return;
+                }
 
 		// store the initials and the conditions in an array
 		let from = [A, A + 1, A + 2];
