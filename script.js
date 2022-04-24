@@ -119,7 +119,7 @@ showResultNoSq.addEventListener("click",
 			return;
 		}
 		if(A>X){   // An entry validation to make sure that A is equal or less then X
-			resultDiv.innerHTML="Please Enter a bigger value for X"
+			resultDivNoSQ.innerHTML="Please Enter a bigger value for X"
 			return;
 	        }
 
