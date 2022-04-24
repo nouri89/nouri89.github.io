@@ -134,7 +134,7 @@ showResultNoSq.addEventListener("click",
 			return;
 		}
 	         if( document.getElementById("digitAnoSq").value=="" || document.getElementById("digitXnoSq").value==""){ 
-                        resultDiv.innerHTML="Please Enter a valid digit"
+                        resultDivNoSQ.innerHTML="Please Enter a valid digit"
                         return;
                 }
 
