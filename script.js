@@ -76,7 +76,7 @@ showResult.addEventListener("click",
 			}
 			index++;
 		}
-		from.forEach((element, index) => runTheLoop(element, to[index], index))
+		from.forEach((element, counter) => runTheLoop(element, to[counter]))
 
 
 		if (resultArray.length == 0) {
@@ -151,7 +151,7 @@ showResultNoSq.addEventListener("click",
 		}
 
 		//call the function to generate the multiples using a ForEach loop
-		from.forEach((element, index) => runTheLoop(element, to[index]))
+		from.forEach((element, counter) => runTheLoop(element, to[counter]))
 
 		if (resultArrayNoSq.length == 0) {
 
